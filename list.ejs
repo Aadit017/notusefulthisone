@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list </title>
+</head>
+<body>
+    <h1 style="font-family: 'Courier New', Courier, monospace; font-size: 25px; text-align:center; color:purple"> <%= day %>-List  </h1> 
+    <ul>
+        <!-- <li> <%= listItem %></li> -->
+        <% for(let i=0;i<listItem.length;i++) { %>
+            <li> <%=listItem[i]%> </li>
+        <% } %>
+</ul>
+    <form action="/" method="POST">
+    <input type="text" name="newToDo" placeholder="Type here" autocomplete="off" onfocus="placeholder='    '">
+    <button type="submit">add</button>
+</form>
+    <!-- autofocus -->
+</body>
+</html>
